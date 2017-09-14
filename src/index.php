@@ -24,7 +24,13 @@
                         echo fread($myfile,filesize("/var/www/my-vol/date"));
                         fclose($myfile);
                 ?>
-
+                <var><?php echo $_SERVER['HTTP_USER_AGENT']; ?></var>
+                <pre>
+                <?php
+                    $browser = get_browser(null, true);
+                    print_r($browser);
+                ?>
+                </pre>
             </div>
         </div>
 
